@@ -18,7 +18,6 @@ apps=(
   slack
   sublime-text3
   virtualbox
-  atom
   disk-inventory-x
   firefox
   github-desktop
