@@ -1,4 +1,4 @@
-# Diuguid .bash_profile
+# Bateh .bash_profile
 
 # Ruby Gems live in /Library/Ruby/Gems/2.0.0/gems/
 # Brew packages live in /usr/local/Cellar/

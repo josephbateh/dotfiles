@@ -55,6 +55,3 @@ Copy and Paste into terminal: `cd ~/ && git clone https://github.com/josephbateh
     │   ├── .prompt                 - Bash logic for coloring / git status of prompt
     │   └── .rvm                    - Properly sources rvm
     │
-    └── themes
-        ├── .Material.itermcolors   - Material color theme for iTerm
-        └── .Material.terminal      - Material color theme for Terminal.app
