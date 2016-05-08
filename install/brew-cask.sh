@@ -4,47 +4,28 @@ brew install brew-cask
 brew tap caskroom/versions
 
 # Not on brew-cask
-# Shazam
-# Sonic Mobile Connect
-# Pocket
-# Twitter
+# Mad catz
+# Window Magnet
+# Office (there is one, but I'm not sure I trust it)
 
 # Install packages
 apps=(
-  1password
-  android-file-transfer
-  android-studio
-  appcleaner
-  brave
-  charles
   cyberduck
-  discord
-  drop-to-gif
-  firefox
-  firefoxdeveloperedition
   flux
   github-desktop
   google-chrome
-  google-chrome-canary
-  google-drive
-  gopro
-  iterm2
   java
-  ngrok
-  opera
-  polymail
-  robomongo
-  safari-technology-preview
-  skype
   slack
-  sococo
   sublime-text3
-  torbrowser
-  transmission
   virtualbox
-  visual-studio-code
-  vivaldi
-  webstorm
+  atom
+  disk-inventory-x
+  firefox
+  github-desktop
+  spotify
+  steam
+  vmware-fusion
+  dropbox
 )
 
 brew cask install "${apps[@]}"

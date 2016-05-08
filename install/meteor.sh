@@ -1,1 +1,1 @@
-curl https://install.meteor.com/ | sh
+# curl https://install.meteor.com/ | sh

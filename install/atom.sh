@@ -4,20 +4,10 @@ brew cask install atom
 
 packages=(
   activate-power-mode
-  atom-beautify
-  editorconfig
-  emmet
+  minimap
+  autoclose-html
   git-control
-  language-babel
-  language-jade
-  linter
-  linter-eslint
   merge-conflicts
-  oceanic-next
-  project-manager
-  react
-  seti-syntax
-  travis-ci-status
 )
 
 apm install "${packages[@]}" --production
