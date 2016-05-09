@@ -18,6 +18,7 @@ apps=(
   slack
   sublime-text3
   virtualbox
+  microsoft-office
   disk-inventory-x
   firefox
   github-desktop
