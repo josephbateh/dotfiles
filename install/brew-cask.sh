@@ -12,7 +12,6 @@ brew tap caskroom/versions
 apps=(
   cyberduck
   flux
-  github-desktop
   google-chrome
   java
   slack
@@ -26,6 +25,7 @@ apps=(
   steam
   vmware-fusion
   dropbox
+  gitkraken
 )
 
 brew cask install "${apps[@]}"
