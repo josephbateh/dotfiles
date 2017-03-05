@@ -16,14 +16,14 @@ dockutil --no-restart --add "/Applications/Microsoft Word.app"
 dockutil --no-restart --add "$HOME/Applications/Spotify.app"
 dockutil --no-restart --add "/Applications/iTunes.app"
 dockutil --no-restart --add "/Applications/Preview.app"
-dockutil --no-restart --add "$HOME/Applications/VMware Fusion.app"
-dockutil --no-restart --add "$HOME/Applications/Atom.app"
 dockutil --no-restart --add "$HOME/Applications/GitKraken.app"
+dockutil --no-restart --add "$HOME/Applications/Atom.app"
 dockutil --no-restart --add "/Applications/Utilities/Terminal.app"
 dockutil --no-restart --add "/Applications/Utilities/Activity Monitor.app"
 dockutil --no-restart --add "/Applications/System Preferences.app"
 
 dockutil --no-restart --add '~/Dropbox' --view grid --display folder --section others
-dockutil --no-restart --add '~/Dropbox/Downloads' --view grid --display folder --section others
+dockutil --no-restart --add '~/Dropbox/Temporary' --view grid --display folder --section others
+dockutil --no-restart --add '~/Downloads' --view grid --display folder --section others
 
 killall Dock

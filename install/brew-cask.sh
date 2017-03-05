@@ -6,26 +6,27 @@ brew tap caskroom/versions
 # Not on brew-cask
 # Mad catz
 # Window Magnet
-# Office (there is one, but I'm not sure I trust it)
+# Slack (it is on brew-cask, but I prefer to install it from the Mac App Store)
 
 # Install packages
 apps=(
   cyberduck
-  flux
-  google-chrome
-  java
-  slack
-  sublime-text3
-  virtualbox
-  microsoft-office
   disk-inventory-x
+  gitkraken
+  google-chrome
+  dropbox
   firefox
-  github-desktop
+  flux
+  java
+  microsoft-office
+  minecraft
   spotify
   steam
+  sublime-text3
+  toggldesktop
+  virtualbox
+  visual-studio-code
   vmware-fusion
-  dropbox
-  gitkraken
 )
 
 brew cask install "${apps[@]}"

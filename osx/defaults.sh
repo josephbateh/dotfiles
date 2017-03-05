@@ -40,7 +40,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPasswordDelay -int 5
 
 ###############################################################################
 # Finder                                                                      #
