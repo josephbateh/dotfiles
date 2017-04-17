@@ -7,6 +7,8 @@ brew tap caskroom/versions
 # Mad catz
 # Window Magnet
 # Slack (it is on brew-cask, but I prefer to install it from the Mac App Store)
+# XCode
+# iWork
 
 # Install packages
 apps=(
@@ -15,15 +17,18 @@ apps=(
   gitkraken
   google-chrome
   dropbox
+  etcher
   firefox
   flux
   java
   microsoft-office
   minecraft
+  owncloud
   spotify
   steam
   sublime-text3
   toggldesktop
+  tunnelbear
   virtualbox
   visual-studio-code
   vmware-fusion
