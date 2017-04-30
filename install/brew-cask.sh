@@ -12,6 +12,7 @@ brew tap caskroom/versions
 
 # Install packages
 apps=(
+  boinc
   cyberduck
   disk-inventory-x
   gitkraken
@@ -26,7 +27,7 @@ apps=(
   owncloud
   spotify
   steam
-  sublime-text3
+  sublime-text
   toggldesktop
   tunnelbear
   virtualbox
