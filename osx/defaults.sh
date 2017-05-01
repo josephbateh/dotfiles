@@ -38,7 +38,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Screen                                                                      #
 ###############################################################################
 
-# Require password immediately after sleep or screen saver begins
+# Require password x seconds after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 5
 
@@ -48,7 +48,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 5
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
