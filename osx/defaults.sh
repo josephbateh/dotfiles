@@ -90,6 +90,10 @@ defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 
+# Turn off guest user
+defaults write com.apple.AppleFileServer guestAccess -bool NO
+defaults write com.apple.smb.server AllowGuestAccess -bool NO
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
