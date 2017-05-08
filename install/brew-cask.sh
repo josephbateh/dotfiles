@@ -18,6 +18,7 @@ apps=(
   microsoft-office
   minecraft
   owncloud
+  rocket
   spotify
   steam
   sublime-text
