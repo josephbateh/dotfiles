@@ -10,6 +10,7 @@ mas search appname
 # Pages: 409201541
 # iMovie: 408981434
 # Microsoft Remote Desktop: 715768417
+# Notability: 736189492
 
 # Install packages
 apps=(
@@ -19,6 +20,7 @@ apps=(
   409201541
   408981434
   715768417
+  736189492
 )
 
 mas install "${apps[@]}"

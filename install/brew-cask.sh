@@ -5,24 +5,23 @@ brew tap caskroom/versions
 
 # Install packages
 apps=(
-  boinc
+  atom
   cyberduck
+  discord
   disk-inventory-x
   gitkraken
   google-chrome
   dropbox
   etcher
   firefox
-  flux
   java
   microsoft-office
   minecraft
-  owncloud
   rocket
   spotify
-  steam
   sublime-text
-  toggldesktop
+  synergy
+  texshop
   tunnelbear
   virtualbox
   visual-studio-code

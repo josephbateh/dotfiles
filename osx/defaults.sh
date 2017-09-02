@@ -94,9 +94,6 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 defaults write com.apple.AppleFileServer guestAccess -bool NO
 defaults write com.apple.smb.server AllowGuestAccess -bool NO
 
-# Enable full keyboard access
-# defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
