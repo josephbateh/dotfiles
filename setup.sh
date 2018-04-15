@@ -12,6 +12,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 [ -f "$DOTFILES_DIR/bin/dotfiles" ] && chmod +x $DOTFILES_DIR/bin/dotfiles
 
 # Symlink profiles
+ln -sfv "$DOTFILES_DIR/symlink/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/symlink/.zprofile" ~
 ln -sfv "$DOTFILES_DIR/symlink/.zshenv" ~
 ln -sfv "$DOTFILES_DIR/symlink/.zshrc" ~

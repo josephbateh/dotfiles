@@ -18,6 +18,7 @@ apps=(
   microsoft-office
   minecraft
   private-internet-access
+  protonmail-bridge
   rocket
   spotify
   sublime-text
