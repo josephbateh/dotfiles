@@ -8,7 +8,6 @@ apps=(
   497799835 # XCode
   409201541 # Pages
   408981434 # iMovie
-  715768417 # Microsoft Remote Desktop
 )
 
 mas install "${apps[@]}"
