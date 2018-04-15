@@ -5,23 +5,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
-# Install Bash + completions
-brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
+binaries=(
+  git
+  mas
+)
 
-# Install more recent versions of some OS X tools.
-# brew install vim --override-system-vi
-# brew install grep --with-default-names
-# brew install gnu-sed --with-default-names
+brew install "${binaries[@]}"
 
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-
-# Install other useful binaries.
-brew install dockutil
-brew install git
-
-# Remove outdated versions from the cellar.
 brew cleanup

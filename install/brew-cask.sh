@@ -10,22 +10,21 @@ apps=(
   discord
   disk-inventory-x
   gitkraken
+  docker
   google-chrome
-  dropbox
   etcher
   firefox
   java
   microsoft-office
   minecraft
+  private-internet-access
   rocket
   spotify
   sublime-text
+  sync
   synergy
-  texshop
-  tunnelbear
   virtualbox
   visual-studio-code
-  vmware-fusion
 )
 
 brew cask install "${apps[@]}"
