@@ -24,6 +24,7 @@ apps=(
   sublime-text
   sync
   synergy
+  vanilla
   virtualbox
   visual-studio-code
 )
