@@ -14,18 +14,13 @@ apps=(
   google-chrome
   etcher
   firefox
-  java
-  microsoft-office
   minecraft
   private-internet-access
-  protonmail-bridge
   rocket
   spotify
   sublime-text
   sync
   synergy
-  vanilla
-  virtualbox
   visual-studio-code
 )
 
