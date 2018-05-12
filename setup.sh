@@ -8,19 +8,36 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Update dotfiles itself first
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
-# Make dotfiles executable.
-[ -f "$DOTFILES_DIR/bin/dotfiles" ] && chmod +x $DOTFILES_DIR/bin/dotfiles
-
 # Symlink profiles
-ln -sfv "$DOTFILES_DIR/symlink/.gitconfig" ~
-ln -sfv "$DOTFILES_DIR/symlink/.zprofile" ~
-ln -sfv "$DOTFILES_DIR/symlink/.zshenv" ~
-ln -sfv "$DOTFILES_DIR/symlink/.zshrc" ~
+read -n1 -p "Update symlink profiles? [y,n]: " doit
+echo ""
+if [ $doit == "y" ]; then
+  echo "Updating symlink profiles."
+  ln -sfv "$DOTFILES_DIR/symlink/.gitconfig" ~
+  ln -sfv "$DOTFILES_DIR/symlink/.zprofile" ~
+  ln -sfv "$DOTFILES_DIR/symlink/.zshenv" ~
+  ln -sfv "$DOTFILES_DIR/symlink/.zshrc" ~  
+else
+  echo "Not updating symlink profiles."
+fi
 
-# Package managers & packages
-. "$DOTFILES_DIR/install/brew.sh"
-. "$DOTFILES_DIR/install/zsh.sh"
-. "$DOTFILES_DIR/install/brew-cask.sh"
-. "$DOTFILES_DIR/install/mas-cli.sh"
-. "$DOTFILES_DIR/macos/defaults.sh"
-. "$DOTFILES_DIR/macos/defaults.dock.sh"
+# Install
+read -n1 -p "Install brew, zsh, brew-cask, and mas-cli? [y,n]: " doit
+echo ""
+if [ $doit == "y" ]; then
+  echo "Installing brew, zsh, brew-cask, and mas-cli."
+  . "$DOTFILES_DIR/install/install.sh"
+else
+  echo "Not installing brew, zsh, brew-cask, or mas-cli"
+fi
+
+# Settings
+read -n1 -p "Update settings? [y,n]: " doit
+echo ""
+if [ $doit == "y" ]; then
+  echo "Updating settings."
+  . "$DOTFILES_DIR/macos/defaults.sh"
+  . "$DOTFILES_DIR/macos/defaults.dock.sh"
+else
+  echo "Not updating settings."
+fi

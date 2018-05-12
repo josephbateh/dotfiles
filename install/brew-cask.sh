@@ -5,6 +5,7 @@ brew tap caskroom/versions
 
 # Install packages
 apps=(
+  alfred
   atom
   cyberduck
   discord

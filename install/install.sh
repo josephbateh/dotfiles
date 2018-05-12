@@ -1,0 +1,5 @@
+  . "$DOTFILES_DIR/install/brew.sh"
+  . "$DOTFILES_DIR/install/zsh.sh"
+  . "$DOTFILES_DIR/install/brew-cask.sh"
+  . "$DOTFILES_DIR/install/mas-cli.sh"
+  . "$DOTFILES_DIR/install/nvm.sh"
