@@ -8,6 +8,7 @@ brew update
 brew upgrade
 
 binaries=(
+  dockutil
   git
   mas
   yarn

@@ -15,6 +15,8 @@ apps=(
   google-chrome
   etcher
   firefox
+  istat-menus
+  iterm2
   minecraft
   private-internet-access
   rocket
