@@ -10,6 +10,7 @@ brew upgrade
 binaries=(
   git
   mas
+  yarn
 )
 
 brew install "${binaries[@]}"
