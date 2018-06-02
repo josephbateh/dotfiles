@@ -8,19 +8,6 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Update dotfiles itself first
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
-# Symlink profiles
-read -n1 -p "Update symlink profiles? [y,n]: " doit
-echo ""
-if [ $doit == "y" ]; then
-  echo "Updating symlink profiles."
-  ln -sfv "$DOTFILES_DIR/symlink/.gitconfig" ~
-  ln -sfv "$DOTFILES_DIR/symlink/.zprofile" ~
-  ln -sfv "$DOTFILES_DIR/symlink/.zshenv" ~
-  ln -sfv "$DOTFILES_DIR/symlink/.zshrc" ~  
-else
-  echo "Not updating symlink profiles."
-fi
-
 # Install
 read -n1 -p "Install brew, zsh, brew-cask, and mas-cli? [y,n]: " doit
 echo ""
@@ -40,4 +27,17 @@ if [ $doit == "y" ]; then
   . "$DOTFILES_DIR/macos/defaults.dock.sh"
 else
   echo "Not updating settings."
+fi
+
+# Symlink profiles
+read -n1 -p "Update symlink profiles? [y,n]: " doit
+echo ""
+if [ $doit == "y" ]; then
+  echo "Updating symlink profiles."
+  ln -sfv "$DOTFILES_DIR/symlink/.gitconfig" ~
+  ln -sfv "$DOTFILES_DIR/symlink/.zprofile" ~
+  ln -sfv "$DOTFILES_DIR/symlink/.zshenv" ~
+  ln -sfv "$DOTFILES_DIR/symlink/.zshrc" ~  
+else
+  echo "Not updating symlink profiles."
 fi
