@@ -5,6 +5,7 @@ brew tap caskroom/versions
 
 # Install packages
 apps=(
+  aerial
   alfred
   atom
   cyberduck
@@ -18,7 +19,6 @@ apps=(
   istat-menus
   iterm2
   minecraft
-  private-internet-access
   rocket
   spotify
   sublime-text
