@@ -11,11 +11,12 @@ apps=(
   cyberduck
   discord
   disk-inventory-x
-  gitkraken
   docker
-  google-chrome
   etcher
   firefox
+  gitkraken
+  google-chrome
+  intel-power-gadget
   istat-menus
   iterm2
   minecraft
