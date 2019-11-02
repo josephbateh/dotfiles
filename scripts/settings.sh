@@ -1,17 +1,10 @@
-#!/usr/bin/env bash
-
-# ~/.osx — https://mths.be/osx
+#!/usr/bin/env zsh
 
 # Ask for the administrator password upfront
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "GLaDOS"
@@ -25,10 +18,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
-
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -37,17 +26,9 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Stop iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
-###############################################################################
-# Screen                                                                      #
-###############################################################################
-
 # Require password x seconds after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 5
-
-###############################################################################
-# Finder                                                                      #
-###############################################################################
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -68,10 +49,6 @@ chflags nohidden ~/Library
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
-
-###############################################################################
-# Dock, Dashboard, and hot corners                                            #
-###############################################################################
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
@@ -96,12 +73,3 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 # Turn off guest user
 defaults write com.apple.AppleFileServer guestAccess -bool NO
 defaults write com.apple.smb.server AllowGuestAccess -bool NO
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
-for app in "cfprefsd" "Dock" "Finder" "Safari"  "SystemUIServer"; do
-	killall "${app}" &> /dev/null
-done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
