@@ -26,8 +26,9 @@ brew cask install spotify
 brew cask install visual-studio-code
 
 # Install Mac App Store Apps
-mas install 803453959 # Slack
-mas install 441258766 # Magnet
-mas install 409201541 # Pages
-mas install 408981434 # iMovie
-mas install 1477385213 # Save To Pocket
+mas install 803453959    # Slack
+mas install 441258766    # Magnet
+mas install 409201541    # Pages
+mas install 408981434    # iMovie
+mas install 1477385213   # Save To Pocket
+mas install 568494494    # Pocket
