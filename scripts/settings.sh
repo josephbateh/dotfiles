@@ -73,3 +73,7 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 # Turn off guest user
 defaults write com.apple.AppleFileServer guestAccess -bool NO
 defaults write com.apple.smb.server AllowGuestAccess -bool NO
+
+# Set text cursor speed to be reasonable (fast)
+defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 2 # normal minimum is 2 (30 ms)
