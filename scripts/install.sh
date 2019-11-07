@@ -13,6 +13,7 @@ brew cask install aerial
 brew cask install alfred
 brew cask install atom
 brew cask install cyberduck
+brew cask install datagrip
 brew cask install discord
 brew cask install docker
 brew cask install firefox
@@ -21,8 +22,10 @@ brew cask install intel-power-gadget
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install lastpass
+brew cask install rider
 brew cask install sensiblesidebuttons
 brew cask install spotify
+brew cask install webstorm
 brew cask install visual-studio-code
 
 # Install Mac App Store Apps
