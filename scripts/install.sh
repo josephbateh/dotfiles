@@ -5,8 +5,10 @@
 
 # Install utilities
 brew install dockutil
+brew install dotnet
 brew install git
 brew install mas
+brew install mono
 
 # Install Casks
 brew cask install aerial
@@ -17,6 +19,7 @@ brew cask install datagrip
 brew cask install discord
 brew cask install docker
 brew cask install firefox
+brew cask install gitkraken
 brew cask install google-chrome
 brew cask install intel-power-gadget
 brew cask install istat-menus
