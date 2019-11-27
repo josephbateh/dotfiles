@@ -3,11 +3,18 @@
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Taps
+brew tap mongodb/brew
+
 # Install utilities
+brew install awscli
 brew install dockutil
 brew install dotnet
 brew install git
+brew install glances
+brew install htop
 brew install mas
+brew install mongodb-community
 brew install mono
 
 # Install Casks
