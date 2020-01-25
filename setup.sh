@@ -18,6 +18,8 @@ brew install dotnet
 brew install git
 brew install glances
 brew install htop
+brew install influxdb
+brew install telegraf
 brew install linode-cli
 brew install mas
 brew install mongodb-community
@@ -45,6 +47,13 @@ brew cask install sensiblesidebuttons
 brew cask install spotify
 brew cask install webstorm
 brew cask install visual-studio-code
+
+# Copy Configuration Files
+yes | cp -rf telegraf.conf /usr/local/etc/
+
+# Start Services
+brew services start influxdb
+brew services start telegraf
 
 # Install Mac App Store Apps
 mas install 803453959    # Slack
