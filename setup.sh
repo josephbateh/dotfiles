@@ -67,10 +67,10 @@ mas install 408981434    # iMovie
 ############
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "GLaDOS"
-sudo scutil --set HostName "GLaDOS"
-sudo scutil --set LocalHostName "GLaDOS"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "GLaDOS"
+sudo scutil --set ComputerName "athena"
+sudo scutil --set HostName "athena"
+sudo scutil --set LocalHostName "athena"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "athena"
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
