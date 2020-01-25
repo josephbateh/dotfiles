@@ -54,6 +54,7 @@ yes | cp -rf telegraf.conf /usr/local/etc/
 # Start Services
 brew services start influxdb
 brew services start telegraf
+brew services start mongodb-community
 
 # Install Mac App Store Apps
 mas install 803453959    # Slack
