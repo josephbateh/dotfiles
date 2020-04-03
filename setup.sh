@@ -29,20 +29,16 @@ brew install watch
 # Install Casks
 brew cask install aerial
 brew cask install alfred
-brew cask install atom
 brew cask install cyberduck
 brew cask install datagrip
 brew cask install discord
 brew cask install docker
 brew cask install firefox
-brew cask install gitkraken
 brew cask install google-chrome
 brew cask install intel-power-gadget
 brew cask install istat-menus
 brew cask install iterm2
-brew cask install lastpass
 brew cask install microsoft-edge
-brew cask install nextcloud
 brew cask install rider
 brew cask install sensiblesidebuttons
 brew cask install spotify
@@ -63,15 +59,25 @@ mas install 441258766    # Magnet
 mas install 409201541    # Pages
 mas install 408981434    # iMovie
 
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+nvm i v12
+
+# Setup Git
+git config --global user.email "github@josephbateh.com"
+git config --global user.name "Joseph Bateh"
+
 ############
 # SETTINGS #
 ############
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "athena"
-sudo scutil --set HostName "athena"
-sudo scutil --set LocalHostName "athena"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "athena"
+sudo scutil --set ComputerName "elena"
+sudo scutil --set HostName "elena"
+sudo scutil --set LocalHostName "elena"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "elena"
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
