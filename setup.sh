@@ -39,6 +39,7 @@ brew cask install intel-power-gadget
 brew cask install istat-menus
 brew cask install iterm2
 brew cask install microsoft-edge
+brew cask install postman
 brew cask install rider
 brew cask install sensiblesidebuttons
 brew cask install spotify
@@ -58,6 +59,7 @@ mas install 803453959    # Slack
 mas install 441258766    # Magnet
 mas install 409201541    # Pages
 mas install 408981434    # iMovie
+mas install 1274495053   # Microsoft To Do
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
