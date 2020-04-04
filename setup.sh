@@ -45,6 +45,7 @@ brew cask install sensiblesidebuttons
 brew cask install spotify
 brew cask install webstorm
 brew cask install visual-studio-code
+brew cask install vnc-viewer
 
 # Copy Configuration Files
 yes | cp -rf telegraf.conf /usr/local/etc/
