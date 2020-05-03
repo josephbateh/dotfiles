@@ -29,6 +29,7 @@ brew install watch
 # Install Casks
 brew cask install aerial
 brew cask install alfred
+brew cask install balenaetcher
 brew cask install cyberduck
 brew cask install datagrip
 brew cask install discord
