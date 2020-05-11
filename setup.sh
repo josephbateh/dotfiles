@@ -78,9 +78,9 @@ git config --global user.name "Joseph Bateh"
 ############
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "elena"
-sudo scutil --set HostName "elena"
-sudo scutil --set LocalHostName "elena"
+sudo scutil --set ComputerName "Katherine"
+sudo scutil --set HostName "Katherine"
+sudo scutil --set LocalHostName "Katherine"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "elena"
 
 # Automatically quit printer app once the print jobs complete
