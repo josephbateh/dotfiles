@@ -15,15 +15,16 @@ brew tap linode/cli
 brew install awscli
 brew install dockutil
 brew install dotnet
+brew install ffmpeg
 brew install git
 brew install glances
 brew install htop
 brew install influxdb
-brew install telegraf
 brew install linode-cli
 brew install mas
 brew install mongodb-community
 brew install mono
+brew install telegraf
 brew install watch
 
 # Install Casks
@@ -57,11 +58,12 @@ brew services start telegraf
 brew services start mongodb-community
 
 # Install Mac App Store Apps
-mas install 803453959    # Slack
-mas install 441258766    # Magnet
-mas install 409201541    # Pages
-mas install 408981434    # iMovie
 mas install 1274495053   # Microsoft To Do
+mas install 408981434    # iMovie
+mas install 409201541    # Pages
+mas install 441258766    # Magnet
+mas install 497799835    # Xcode
+mas install 803453959    # Slack
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
