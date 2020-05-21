@@ -13,6 +13,7 @@ brew tap linode/cli
 
 # Install utilities
 brew install awscli
+brew install azure-cli
 brew install dockutil
 brew install dotnet
 brew install ffmpeg
@@ -30,6 +31,7 @@ brew install watch
 # Install Casks
 brew cask install aerial
 brew cask install alfred
+brew cask install azure-data-studio
 brew cask install balenaetcher
 brew cask install cyberduck
 brew cask install datagrip
@@ -45,9 +47,11 @@ brew cask install postman
 brew cask install rider
 brew cask install sensiblesidebuttons
 brew cask install spotify
-brew cask install webstorm
+brew cask install tunnelblick
+brew cask install virtualbox
 brew cask install visual-studio-code
 brew cask install vnc-viewer
+brew cask install webstorm
 
 # Copy Configuration Files
 yes | cp -rf telegraf.conf /usr/local/etc/
