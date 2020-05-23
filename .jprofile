@@ -1,0 +1,80 @@
+##########################################################################
+# Aliases
+##########################################################################
+
+## Git
+alias g='git'
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add .'
+alias gl='git log -3'
+alias grs='git reset --soft HEAD~1'
+alias grus='git checkout -- .'
+alias gac='git add . && git commit'
+alias gac-amend='git add . && git commit --amend'
+alias gpsuo='git push --set-upstream origin `git symbolic-ref --short HEAD`'
+alias git-ignore-remove='git rm -r --cached .'
+alias git-delete-branches='git branch -D $(git branch)'
+
+function hist {
+  git log -$1 --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
+}
+
+function squash {
+  git rebase -i $1
+}
+
+function rebase {
+    git stash
+    git checkout $1
+    git pull
+    git checkout -
+    git rebase $1
+    git stash pop
+}
+
+## Ports and Processes
+function port {
+  lsof -i :"$@";
+}
+function kill-pid {
+  kill -9 $@
+}
+function kill-port {
+  kill -9 $( lsof -t -i:$@; )
+}
+function process {
+  ps -eo pid,user,group,args,etime,lstart | grep "$@";
+}
+
+## Docker
+alias dk='docker'
+alias dki='docker images'
+alias dk-up='docker-compose up -d'
+alias dk-stop='docker kill $(docker ps -q) || true'
+alias dk-rm='docker rm $(docker ps -a -q)'
+alias dk-clean='dk-stop && dk-rm && dk-start'
+alias dk-img-rm='docker rmi $(docker images -a -q)'
+alias dk-img-none-rm="docker rmi $(docker images | grep '^<none>' | awk '{print $3}')"
+
+function dk-start {
+  if [ -z "$@" ]; then
+    dk-stop && cd $dotfiles_path/localhost && docker-compose -f docker-compose.yml up -d && cd - && docker ps
+  else
+    dk-stop && cd $dotfiles_path/localhost && docker-compose -f docker-compose.yml -f docker-compose-"$@".yml up -d && cd - && docker ps
+  fi
+}
+
+function dk-remove-with-name {
+  docker ps -a | awk '{ print $1,$2 }' | grep $1 | awk '{print $1 }' | xargs -I {} docker rm {}
+}
+
+## Kubernetes
+alias k='kubectl'
+
+##########################################################################
+# Environment variables
+##########################################################################
+
+# Default Editor
+export EDITOR=nano

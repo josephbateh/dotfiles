@@ -1,5 +1,10 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env zsh -ex
+
+# Get sudo
 sudo -v
+
+# Install Profiles
+bash -ex profile.install.sh
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -90,7 +95,7 @@ git config --global user.name "Joseph Bateh"
 sudo scutil --set ComputerName "Katherine"
 sudo scutil --set HostName "Katherine"
 sudo scutil --set LocalHostName "Katherine"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "elena"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Katherine"
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
