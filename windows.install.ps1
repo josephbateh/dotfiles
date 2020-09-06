@@ -1,3 +1,7 @@
+# Set Execution Policy Before Running
+# Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+# Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
+
 Get-AppxPackage *3dbuilder* | Remove-AppxPackage
 Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
 Get-AppxPackage *windowscamera* | Remove-AppxPackage
@@ -11,8 +15,6 @@ Get-AppxPackage *bingfinance* | Remove-AppxPackage
 Get-AppxPackage *zunevideo* | Remove-AppxPackage
 Get-AppxPackage *bingnews* | Remove-AppxPackage
 Get-AppxPackage *onenote* | Remove-AppxPackage
-Get-AppxPackage *people* | Remove-AppxPackage
-Get-AppxPackage *windowsphone* | Remove-AppxPackagee
 Get-AppxPackage *bingsports* | Remove-AppxPackage
 Get-AppxPackage *soundrecorder* | Remove-AppxPackage
 Get-AppxPackage *bingweather* | Remove-AppxPackage
