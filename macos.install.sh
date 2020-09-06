@@ -33,6 +33,7 @@ brew install linode-cli
 brew install mas
 brew install mongodb-community
 brew install mono
+brew install powershell
 brew install telegraf
 brew install watch
 
