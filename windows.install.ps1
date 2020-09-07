@@ -18,3 +18,6 @@ Get-AppxPackage *onenote* | Remove-AppxPackage
 Get-AppxPackage *bingsports* | Remove-AppxPackage
 Get-AppxPackage *soundrecorder* | Remove-AppxPackage
 Get-AppxPackage *bingweather* | Remove-AppxPackage
+
+choco install virtualbox
+choco install vlc
