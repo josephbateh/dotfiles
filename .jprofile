@@ -49,6 +49,7 @@ function process {
 
 ## Docker
 alias dk='docker'
+alias dkp='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
 alias dki='docker images'
 alias dk-up='docker-compose up -d'
 alias dk-stop='docker kill $(docker ps -q) || true'
