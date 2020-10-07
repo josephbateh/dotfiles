@@ -45,6 +45,7 @@ brew cask install balenaetcher
 brew cask install cyberduck
 brew cask install datagrip
 brew cask install discord
+brew cask install disk-inventory-x
 brew cask install docker
 brew cask install firefox
 brew cask install google-chrome
