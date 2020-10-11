@@ -47,6 +47,10 @@ function process {
   ps -eo pid,user,group,args,etime,lstart | grep "$@";
 }
 
+## File System
+
+alias top-dir='du -a /var | sort -n -r | head -n 10'
+
 ## Docker
 alias dk='docker'
 alias dkp='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
