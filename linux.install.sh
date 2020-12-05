@@ -10,9 +10,7 @@ bash -ex profile.install.sh
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Applications
-sudo apt install -y htop
-sudo apt install -y lsof
-sudo apt install -y nano
+sudo apt install -y htop lsof nano
 
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
@@ -51,3 +49,5 @@ else
   echo ".NET Core not installed."
 fi
 
+# Install Java
+sudo apt install -y default-jdk
