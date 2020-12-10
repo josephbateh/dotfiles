@@ -1,5 +1,5 @@
 #!/bin/bash -ex
-pushd /home/joseph/.dotfiles
+pushd ~/.dotfiles
 date=$(date +%Y%m%d)
 git checkout master
 git add .
