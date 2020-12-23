@@ -16,6 +16,10 @@ alias gpsuo='git push --set-upstream origin `git symbolic-ref --short HEAD`'
 alias git-ignore-remove='git rm -r --cached .'
 alias git-delete-branches='git branch -D $(git branch)'
 
+function git-grep {
+  git rev-list --all | xargs git grep $1
+}
+
 function hist {
   git log -$1 --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
 }
@@ -48,7 +52,6 @@ function process {
 }
 
 ## File System
-
 alias top-dir='du -a /var | sort -n -r | head -n 10'
 
 ## Docker
