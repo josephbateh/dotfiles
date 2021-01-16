@@ -63,8 +63,8 @@ alias dk-up='docker-compose up -d'
 alias dk-stop='docker kill $(docker ps -q) || true'
 alias dk-rm='docker rm $(docker ps -a -q)'
 alias dk-clean='dk-stop && dk-rm && dk-start'
-alias dk-img-rm='docker rmi $(docker images -a -q)'
-alias dk-img-none-rm="docker image rm $(docker images | grep none | awk '{print $3}')"
+alias dk-img-rm='docker images -a -q | xargs docker rmi'
+alias dk-img-none-rm="docker images | grep none | awk '{print $3}' | xargs docker image rm"
 
 function dk-start {
   if [ -z "$@" ]; then
