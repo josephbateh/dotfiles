@@ -81,6 +81,9 @@ function dk-remove-with-name {
 ## Kubernetes
 alias k='kubectl'
 
+## Terraform
+alias tf='terraform'
+
 ##########################################################################
 # Environment variables
 ##########################################################################
