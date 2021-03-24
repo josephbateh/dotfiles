@@ -6,6 +6,7 @@
 alias g='git'
 alias gs='git status'
 alias gp='git add . && git stash && git pull && git stash pop'
+alias gdb="git branch | grep -v '*' | xargs git branch -D"
 alias gd='git diff'
 alias ga='git add .'
 alias gl='git log -3'
@@ -15,7 +16,6 @@ alias gac='git add . && git commit'
 alias gac-amend='git add . && git commit --amend'
 alias gpsuo='git push --set-upstream origin `git symbolic-ref --short HEAD`'
 alias git-ignore-remove='git rm -r --cached .'
-alias git-delete-branches='git branch -D $(git branch)'
 
 function git-grep {
   git rev-list --all | xargs git grep $1
