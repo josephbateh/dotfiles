@@ -5,6 +5,7 @@
 ## Git
 alias g='git'
 alias gs='git status'
+alias gp='git add . && git stash && git pull && git stash pop'
 alias gd='git diff'
 alias ga='git add .'
 alias gl='git log -3'
