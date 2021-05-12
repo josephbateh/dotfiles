@@ -1,3 +1,4 @@
+#!/bin/bash
 ##########################################################################
 # Aliases
 ##########################################################################
@@ -17,39 +18,47 @@ alias gac-amend='git add . && git commit --amend'
 alias gpsuo='git push --set-upstream origin `git symbolic-ref --short HEAD`'
 alias git-ignore-remove='git rm -r --cached .'
 
+function git-reset {
+  git add .
+  git stash
+  git stash drop
+  git checkout "$1"
+  git fetch
+  git pull
+}
+
 function git-grep {
-  git rev-list --all | xargs git grep $1
+  git rev-list --all | xargs git grep "$1"
 }
 
 function hist {
-  git log -$1 --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
+  git log -"$1" --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
 }
 
 function squash {
-  git rebase -i $1
+  git rebase -i "$1"
 }
 
 function rebase {
     git stash
-    git checkout $1
+    git checkout "$1"
     git pull
     git checkout -
-    git rebase $1
+    git rebase "$1"
     git stash pop
 }
 
 ## Ports and Processes
 function port {
-  lsof -i :"$@";
+  lsof -t -i :"$1"
 }
+
 function kill-pid {
-  kill -9 $@
+  kill -9 "$@"
 }
+
 function kill-port {
-  kill -9 $( lsof -t -i:$@; )
-}
-function process {
-  ps -eo pid,user,group,args,etime,lstart | grep "$@";
+  lsof -t -i :"$1" | xargs kill -9
 }
 
 ## File System
@@ -67,16 +76,8 @@ alias dk-clean='dk-stop && dk-rm && dk-start'
 alias dk-img-rm='docker images -a -q | xargs docker rmi'
 alias dk-img-none-rm="docker images | grep none | awk '{print $3}' | xargs docker image rm"
 
-function dk-start {
-  if [ -z "$@" ]; then
-    dk-stop && cd $dotfiles_path/localhost && docker-compose -f docker-compose.yml up -d && cd - && docker ps
-  else
-    dk-stop && cd $dotfiles_path/localhost && docker-compose -f docker-compose.yml -f docker-compose-"$@".yml up -d && cd - && docker ps
-  fi
-}
-
 function dk-remove-with-name {
-  docker ps -a | awk '{ print $1,$2 }' | grep $1 | awk '{print $1 }' | xargs -I {} docker rm {}
+  docker ps -a | awk '{ print $1,$2 }' | grep "$1" | awk '{print $1 }' | xargs -I {} docker rm {}
 }
 
 ## Kubernetes
