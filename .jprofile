@@ -6,20 +6,20 @@
 ## Git
 alias g='git'
 alias gs='git status'
-alias gp='git add . && git stash && git pull && git stash pop'
+alias gp='git add -A && git stash && git pull && git stash pop'
 alias gdb="git branch | grep -v '*' | xargs git branch -D"
 alias gd='git diff'
-alias ga='git add .'
+alias ga='git add -A'
 alias gl='git log -3'
 alias grs='git reset --soft HEAD~1'
 alias grus='git checkout -- .'
-alias gac='git add . && git commit'
-alias gac-amend='git add . && git commit --amend'
+alias gac='git add -A && git commit'
+alias gac-amend='git add -A && git commit --amend'
 alias gpsuo='git push --set-upstream origin `git symbolic-ref --short HEAD`'
 alias git-ignore-remove='git rm -r --cached .'
 
 function git-reset {
-  git add .
+  git add -A
   git stash
   git stash drop
   git checkout "$1"
