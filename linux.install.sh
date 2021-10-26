@@ -51,3 +51,6 @@ fi
 
 # Install Java
 sudo apt install -y default-jdk
+
+# Install OpenVPN
+sudo apt install -y openvpn network-manager-openvpn network-manager-openvpn-gnome
