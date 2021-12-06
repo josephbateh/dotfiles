@@ -3,6 +3,9 @@
 # Aliases
 ##########################################################################
 
+# Bash
+alias cwd='printf "%q\n" "$(pwd)"'
+
 ## Git
 alias g='git'
 alias gs='git status'
