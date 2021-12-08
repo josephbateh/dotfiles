@@ -38,32 +38,32 @@ brew install telegraf
 brew install watch
 
 # Install Casks
-brew cask install aerial
-brew cask install alfred
-brew cask install azure-data-studio
-brew cask install balenaetcher
-brew cask install cyberduck
-brew cask install datagrip
-brew cask install discord
-brew cask install disk-inventory-x
-brew cask install docker
-brew cask install firefox
-brew cask install google-chrome
-brew cask install intel-power-gadget
-brew cask install istat-menus
-brew cask install iterm2
-brew cask install microsoft-edge
-brew cask install microsoft-teams
-brew cask install multipass
-brew cask install postman
-brew cask install rider
-brew cask install sensiblesidebuttons
-brew cask install spotify
-brew cask install tunnelblick
-brew cask install virtualbox
-brew cask install visual-studio-code
-brew cask install vnc-viewer
-brew cask install webstorm
+brew install --cask aerial
+brew install --cask alfred
+brew install --cask azure-data-studio
+brew install --cask balenaetcher
+brew install --cask cyberduck
+brew install --cask datagrip
+brew install --cask discord
+brew install --cask disk-inventory-x
+brew install --cask docker
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask intel-power-gadget
+brew install --cask istat-menus
+brew install --cask iterm2
+brew install --cask microsoft-edge
+brew install --cask microsoft-teams
+brew install --cask multipass
+brew install --cask postman
+brew install --cask rider
+brew install --cask sensiblesidebuttons
+brew install --cask spotify
+brew install --cask tunnelblick
+brew install --cask virtualbox
+brew install --cask visual-studio-code
+brew install --cask vnc-viewer
+brew install --cask webstorm
 
 # Copy Configuration Files
 yes | cp -rf telegraf.conf /usr/local/etc/
