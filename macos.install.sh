@@ -1,4 +1,6 @@
-#!/usr/bin/env zsh -ex
+#!/bin/bash
+set -e
+set -x
 
 # Get sudo
 sudo -v
