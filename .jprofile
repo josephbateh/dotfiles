@@ -89,6 +89,11 @@ alias k='kubectl'
 ## Terraform
 alias tf='terraform'
 
+## Pandoc
+function md-to-word {
+  pandoc -o "$1".docx -f markdown -t docx "$1".md
+}
+
 ##########################################################################
 # Environment variables
 ##########################################################################
