@@ -38,6 +38,7 @@ brew install mongodb-community
 brew install mono
 brew install pandoc
 brew install powershell
+brew install pyenv
 brew install telegraf
 brew install watch
 
@@ -90,6 +91,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 nvm i v12
+
+# Install Python
+pyenv install 2.7.18
+pyenv install 3.10.3
 
 # Setup Git
 git config --global user.email "github@josephbateh.com"
