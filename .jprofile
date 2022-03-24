@@ -10,6 +10,7 @@ alias cwd='printf "%q\n" "$(pwd)"'
 alias g='git'
 alias gs='git status'
 alias gfp='git remote prune origin && git fetch && git pull'
+alias grpo='git remote prune origin'
 alias gsp='git add -A && git stash && git fetch prune origin && git pull && git stash pop'
 alias gdb="git branch | grep -v '*' | xargs git branch -D"
 alias gd='git diff'
