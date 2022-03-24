@@ -9,7 +9,7 @@ alias cwd='printf "%q\n" "$(pwd)"'
 ## Git
 alias g='git'
 alias gs='git status'
-alias gfp='git fetch prune origin && git pull'
+alias gfp='git remote prune origin && git fetch && git pull'
 alias gsp='git add -A && git stash && git fetch prune origin && git pull && git stash pop'
 alias gdb="git branch | grep -v '*' | xargs git branch -D"
 alias gd='git diff'
@@ -27,7 +27,8 @@ function git-reset {
   git stash
   git stash drop
   git checkout "$1"
-  git fetch prune origin
+  git remote prune origin
+  git fetch
   git pull
 }
 
