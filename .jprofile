@@ -78,9 +78,14 @@ alias dkv='docker volume ls'
 alias dk-up='docker-compose up -d'
 alias dk-stop='docker kill $(docker ps -q) || true'
 alias dk-rm='docker rm $(docker ps -a -q)'
-alias dk-clean='dk-stop && dk-rm && dk-start'
 alias dk-img-rm='docker images -a -q | xargs docker rmi'
 alias dk-img-none-rm="docker images | grep none | awk '{print $3}' | xargs docker image rm"
+
+function dk-reset {
+  docker ps -q | xargs docker stop
+  docker ps -aq | xargs docker rm
+  docker images -q | xargs docker rmi
+}
 
 function dk-remove-with-name {
   docker ps -a | awk '{ print $1,$2 }' | grep "$1" | awk '{print $1 }' | xargs -I {} docker rm {}

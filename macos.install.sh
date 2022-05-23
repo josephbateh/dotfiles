@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 set -x
 
 # Get sudo
@@ -11,8 +10,8 @@ bash -ex profile.install.sh
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# XCode Tools
-xcode-select —install
+# XCode Tools (This may no longer be necessary on Monterey)
+# xcode-select —-install
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -69,14 +68,6 @@ brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask vnc-viewer
 brew install --cask webstorm
-
-# Copy Configuration Files
-yes | cp -rf telegraf.conf /usr/local/etc/
-
-# Start Services
-brew services start influxdb
-brew services start telegraf
-brew services start mongodb-community
 
 # Install Mac App Store Apps
 mas install 1274495053   # Microsoft To Do
