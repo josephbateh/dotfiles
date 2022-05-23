@@ -85,6 +85,7 @@ function dk-reset {
   docker ps -q | xargs docker stop
   docker ps -aq | xargs docker rm
   docker images -q | xargs docker rmi
+  docker system prune --force --all --volumes
 }
 
 function dk-remove-with-name {
