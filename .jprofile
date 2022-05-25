@@ -3,6 +3,11 @@
 # Aliases
 ##########################################################################
 
+# Unique Name
+alias ran="uuidgen | cut -f1 -d'-'"
+alias ranc="uuidgen | cut -f1 -d'-' | pbcopy"
+alias uuid="uuidgen"
+
 # Bash
 alias cwd='printf "%q\n" "$(pwd)"'
 
