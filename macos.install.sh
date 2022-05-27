@@ -36,6 +36,7 @@ brew install mas
 brew install mongodb-community
 brew install mono
 brew install pandoc
+brew install postgresql
 brew install powershell
 brew install pyenv
 brew install telegraf
