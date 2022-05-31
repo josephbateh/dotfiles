@@ -110,6 +110,7 @@ function md-to-word {
   pandoc -o "$1".docx -f markdown -t docx "$1".md
 }
 
+### For usage with Google Docs
 function md-to-odt {
   pandoc -o "$1".odt -f markdown -t odt "$1".md
 }
