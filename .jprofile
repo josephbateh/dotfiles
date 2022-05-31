@@ -13,20 +13,21 @@ alias cwd='printf "%q\n" "$(pwd)"'
 
 ## Git
 alias g='git'
-alias gs='git status'
-alias gfp='git remote prune origin && git fetch && git pull'
-alias grpo='git remote prune origin'
-alias gsp='git add -A && git stash && git fetch prune origin && git pull && git stash pop'
-alias gdb="git branch | grep -v '*' | xargs git branch -D"
-alias gd='git diff'
 alias ga='git add -A'
+alias gac-amend='git add -A && git commit --amend'
+alias gac='git add -A && git commit'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdb="git branch | grep -v '*' | xargs git branch -D"
+alias gfp='git remote prune origin && git fetch && git pull'
+alias git-ignore-remove='git rm -r --cached .'
 alias gl='git log -3'
+alias gpsuo='git push --set-upstream origin `git symbolic-ref --short HEAD`'
+alias grpo='git remote prune origin'
 alias grs='git reset --soft HEAD~1'
 alias grus='git checkout -- .'
-alias gac='git add -A && git commit'
-alias gac-amend='git add -A && git commit --amend'
-alias gpsuo='git push --set-upstream origin `git symbolic-ref --short HEAD`'
-alias git-ignore-remove='git rm -r --cached .'
+alias gs='git status'
+alias gsp='git add -A && git stash && git fetch prune origin && git pull && git stash pop'
 
 function git-reset {
   git add -A
