@@ -29,6 +29,7 @@ alias grs='git reset --soft HEAD~1'
 alias grus='git checkout -- .'
 alias gs='git status'
 alias gsp='git add -A && git stash && git fetch prune origin && git pull && git stash pop'
+alias grs='git -P log -2 -s --format=%h | tail -1 | xargs git reset --soft'
 
 function git-reset {
   git add -A
