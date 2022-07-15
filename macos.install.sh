@@ -30,6 +30,7 @@ brew install ffmpeg
 brew install git
 brew install glances
 brew install htop
+brew install iftop
 brew install influxdb
 brew install linode-cli
 brew install mas
