@@ -39,6 +39,7 @@ brew install mono
 brew install pandoc
 brew install postgresql
 brew install powershell
+brew install pv
 brew install pyenv
 brew install telegraf
 brew install watch
