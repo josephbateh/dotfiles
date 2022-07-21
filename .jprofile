@@ -88,6 +88,7 @@ alias dk='docker'
 alias dki='docker images'
 alias dkp='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
 alias dkv='docker volume ls'
+alias dc='docker-compose'
 
 function dk-reset {
   docker ps -q | xargs docker stop
