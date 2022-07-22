@@ -41,7 +41,9 @@ brew install postgresql
 brew install powershell
 brew install pv
 brew install pyenv
+brew install screen
 brew install telegraf
+brew install tmux
 brew install watch
 
 # Install Casks
