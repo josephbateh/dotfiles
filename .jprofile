@@ -123,3 +123,6 @@ function md-to-odt {
 
 # Default Editor
 export EDITOR=nano
+
+# ZSH Special Sauce
+export PROMPT_EOL_MARK='' # Stops ZSH from displaying % after patrial lines
