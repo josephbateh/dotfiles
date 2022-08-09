@@ -34,6 +34,7 @@ brew install iftop
 brew install influxdb
 brew install linode-cli
 brew install mas
+brew install minikube
 brew install mongodb-community
 brew install mono
 brew install pandoc
