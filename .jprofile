@@ -79,16 +79,17 @@ function kill-port {
 alias top-dir='du -a /var | sort -n -r | head -n 10'
 
 ## Docker
+alias dc='docker-compose'
 alias dk-img-rm='docker images -a -q | xargs docker rmi'
-alias dk-prune="docker system prune"
 alias dk-rm='docker rm $(docker ps -a -q)'
 alias dk-stop='docker kill $(docker ps -q) || true'
 alias dk-up='docker-compose up -d'
 alias dk='docker'
+alias dkc="docker system prune --all --volumes"
 alias dki='docker images'
 alias dkp='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
+alias dkps='docker ps --filter "status=exited" --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"'
 alias dkv='docker volume ls'
-alias dc='docker-compose'
 
 function dk-reset {
   docker ps -q | xargs docker stop
