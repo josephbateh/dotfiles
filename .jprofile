@@ -10,6 +10,7 @@ alias uuid="uuidgen"
 
 # Bash
 alias cwd='printf "%q\n" "$(pwd)"'
+alias unix-epoch='$(date +%s)'
 
 ## Git
 alias g='git'
