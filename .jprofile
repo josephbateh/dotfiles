@@ -76,9 +76,6 @@ function kill-port {
   lsof -t -i :"$1" | xargs kill -9
 }
 
-## File System
-alias top-dir='du -a /var | sort -n -r | head -n 10'
-
 ## Docker
 alias dc='docker-compose'
 alias dk-img-rm='docker images -a -q | xargs docker rmi'
