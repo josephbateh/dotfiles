@@ -11,6 +11,7 @@ alias uuid="uuidgen"
 # Bash
 alias cwd='printf "%q\n" "$(pwd)"'
 alias unix-epoch='$(date +%s)'
+alias semver-sort='sort -t "." -k1,1n -k2,2n -k3,3n'
 
 ## Git
 alias g='git'
