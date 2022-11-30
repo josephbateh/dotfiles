@@ -13,6 +13,12 @@ alias cwd='printf "%q\n" "$(pwd)"'
 alias unix-epoch='$(date +%s)'
 alias semver-sort='sort -t "." -k1,1n -k2,2n -k3,3n'
 
+# Use GNU sed instead of MacOS sed
+alias sed=gsed
+
+# Undo default alias that adds a flag to cp
+unalias cp
+
 ## Git
 alias g='git'
 alias ga='git add -A'

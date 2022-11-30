@@ -29,6 +29,7 @@ brew install dotnet
 brew install ffmpeg
 brew install git
 brew install glances
+brew install gnu-sed
 brew install htop
 brew install iftop
 brew install influxdb
