@@ -69,6 +69,7 @@ brew install --cask multipass
 brew install --cask postman
 brew install --cask rider
 brew install --cask sensiblesidebuttons
+brew install --cask signal
 brew install --cask spotify
 brew install --cask tunnelblick
 brew install --cask virtualbox
