@@ -114,6 +114,14 @@ function dk-remove-with-name {
 ## Kubernetes
 alias k='kubectl'
 
+function kube-drain-node {
+  # Add the NoSchedule to a node.
+  # Argument 1: Kubernetes context
+  # Argument 2: Kubernetes node name
+  kubectl config use-context "${1:?}"
+  kubectl drain --delete-emptydir-data --ignore-daemonsets=true --force "${2:?}"
+}
+
 ## Terraform
 alias tf='terraform'
 
