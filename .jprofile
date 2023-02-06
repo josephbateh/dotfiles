@@ -113,6 +113,11 @@ function dk-remove-with-name {
 
 ## Kubernetes
 alias k='kubectl'
+alias kcon='kubectl config use-context'
+
+function k-cordon {
+  kubectl drain --delete-emptydir-data --ignore-daemonsets=true --force "$1"
+}
 
 function kube-drain-node {
   # Add the NoSchedule to a node.
