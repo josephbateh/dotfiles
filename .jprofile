@@ -113,7 +113,13 @@ function dk-remove-with-name {
 
 ## Kubernetes
 alias k='kubectl'
-alias kcon='kubectl config use-context'
+alias kcon='kubectl config'
+alias kcon-current='kubectl config current-context'
+alias kcon-list='kubectl config get-contexts --output name'
+
+function kcon-use {
+  kubectl config use-context "${1}"
+}
 
 function k-cordon {
   kubectl drain --delete-emptydir-data --ignore-daemonsets=true --force "$1"
