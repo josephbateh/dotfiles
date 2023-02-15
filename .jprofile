@@ -84,6 +84,7 @@ function git-new-branch {
   git fetch
   git pull
   git checkout -b "$2"
+  git stash pop
 }
 
 ## Ports and Processes
