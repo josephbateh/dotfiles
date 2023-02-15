@@ -74,6 +74,18 @@ function rebase {
     git stash pop
 }
 
+function git-new-branch {
+  # Create a new branch with the current changes, off a different branch
+  # git-new-branch main new-feature
+  git add -A
+  git stash
+  git checkout "$1"
+  git remote prune origin
+  git fetch
+  git pull
+  git checkout -b "$2"
+}
+
 ## Ports and Processes
 function port {
   lsof -t -i :"$1"
