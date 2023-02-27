@@ -138,6 +138,10 @@ function k-cordon {
   kubectl drain --delete-emptydir-data --ignore-daemonsets=true --force "$1"
 }
 
+function k-uncordon {
+  kubectl uncordon "$1"
+}
+
 function kube-drain-node {
   # Add the NoSchedule to a node.
   # Argument 1: Kubernetes context
