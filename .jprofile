@@ -42,6 +42,7 @@ function git-reset {
   git add -A
   git checkout -b "git-reset-backup-$(date +%s)-$(git symbolic-ref --short HEAD)"
   git commit -m "Backup from running git-reset"
+  git checkout -
   git checkout "$1"
   git remote prune origin
   git fetch
