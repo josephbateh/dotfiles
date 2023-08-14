@@ -49,6 +49,18 @@ function git-reset {
   git pull
 }
 
+# Delete the local and checkout the remote branch, but keep the local changes on a backup branch.
+function git-recheckout {
+  git add -A
+  git checkout -b "git-reset-backup-$(date +%s)-$(git symbolic-ref --short HEAD)"
+  git commit -m "Backup from running git-reset"
+  git branch -D "$1"
+  git fetch
+  git remote prune origin
+  git checkout "$1"
+  git pull
+}
+
 function git-grep {
   git rev-list --all | xargs git grep "$1"
 }
