@@ -32,9 +32,9 @@ if [ $version == "focal" ]; then
   sudo apt update
   sudo apt install -y apt-transport-https
   sudo apt update
-  sudo apt install -y dotnet-sdk-2.1
   sudo apt install -y dotnet-sdk-3.1
-  sudo apt install -y dotnet-sdk-5.0
+  sudo apt install -y dotnet-sdk-6.0
+  sudo apt install -y dotnet-sdk-7.0
 elif [ $version == "bionic" ]; then
   wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
   sudo dpkg -i packages-microsoft-prod.deb
@@ -42,9 +42,9 @@ elif [ $version == "bionic" ]; then
   sudo apt update
   sudo apt install -y apt-transport-https
   sudo apt update
-  sudo apt install -y dotnet-sdk-2.1
   sudo apt install -y dotnet-sdk-3.1
-  sudo apt install -y dotnet-sdk-5.0
+  sudo apt install -y dotnet-sdk-6.0
+  sudo apt install -y dotnet-sdk-7.0
 else
   echo ".NET Core not installed."
 fi
