@@ -176,6 +176,12 @@ function md-to-odt {
   pandoc -o "$1".odt -f markdown -t odt "$1".md
 }
 
+## Golang
+function go-setup {
+  go get
+  go mod tidy
+}
+
 ##########################################################################
 # Environment variables
 ##########################################################################
