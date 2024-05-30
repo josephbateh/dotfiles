@@ -27,6 +27,7 @@ brew install dasel
 brew install dockutil
 brew install dotnet
 brew install ffmpeg
+brew install fzf
 brew install git
 brew install glances
 brew install gnu-sed

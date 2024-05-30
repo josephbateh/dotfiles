@@ -51,3 +51,6 @@ fi
 
 # Install Java
 sudo apt install -y default-jdk
+
+# Install Fuzzy Finder
+sudo apt install fzf
