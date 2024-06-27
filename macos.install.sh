@@ -54,6 +54,7 @@ brew install --cask aerial
 brew install --cask alfred
 brew install --cask azure-data-studio
 brew install --cask balenaetcher
+brew install --cask crystalfetch
 brew install --cask cyberduck
 brew install --cask datagrip
 brew install --cask discord
@@ -73,6 +74,7 @@ brew install --cask sensiblesidebuttons
 brew install --cask signal
 brew install --cask spotify
 brew install --cask tunnelblick
+brew install --cask utm
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask vnc-viewer
