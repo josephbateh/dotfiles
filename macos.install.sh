@@ -70,6 +70,7 @@ brew install --cask microsoft-teams
 brew install --cask multipass
 brew install --cask postman
 brew install --cask rider
+brew install --cask scroll-reverser
 brew install --cask sensiblesidebuttons
 brew install --cask signal
 brew install --cask spotify
