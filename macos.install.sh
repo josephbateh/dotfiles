@@ -26,6 +26,7 @@ brew install azure-cli
 brew install dasel
 brew install dockutil
 brew install dotnet
+brew install duti
 brew install ffmpeg
 brew install fzf
 brew install git
@@ -48,6 +49,7 @@ brew install screen
 brew install telegraf
 brew install tmux
 brew install watch
+brew install yq
 
 # Install Casks
 brew install --cask aerial
@@ -168,3 +170,6 @@ defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 2 # normal minimum is 2 (30 ms)
 
 killall Dock
+
+# Set MacOS to open things with VSCode instead of XCode
+yq -r "to_entries | (map(.value.extensions) | flatten) - [null] | unique | .[]" languages.yaml | xargs -L 1 -I "{}" duti -s com.microsoft.VSCode {} all
