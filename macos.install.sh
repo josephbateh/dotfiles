@@ -23,6 +23,7 @@ brew tap linode/cli
 # Install utilities
 brew install awscli
 brew install azure-cli
+brew install colordiff
 brew install dasel
 brew install dockutil
 brew install dotnet
