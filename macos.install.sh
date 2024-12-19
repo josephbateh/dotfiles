@@ -68,6 +68,7 @@ brew install --cask google-chrome
 brew install --cask intel-power-gadget
 brew install --cask istat-menus
 brew install --cask iterm2
+brew install --cask libreoffice
 brew install --cask microsoft-edge
 brew install --cask microsoft-teams
 brew install --cask multipass
