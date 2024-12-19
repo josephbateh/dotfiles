@@ -29,7 +29,15 @@ git config --global user.email "github@josephbateh.com"
 # Install .NET Core
 version=$(lsb_release -cs)
 
-if [ "$version" == "jammy" ]; then
+if [ "$version" == "noble" ]; then
+  wget https://packages.microsoft.com/config/ubuntu/24.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+  sudo dpkg -i packages-microsoft-prod.deb
+  rm -rf packages-microsoft-prod.deb
+  sudo apt update
+  sudo apt install -y apt-transport-https
+  sudo apt update
+  sudo apt install -y dotnet-sdk-8.0
+elif [ "$version" == "jammy" ]; then
   wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
   sudo dpkg -i packages-microsoft-prod.deb
   rm -rf packages-microsoft-prod.deb
