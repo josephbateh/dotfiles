@@ -1,6 +1,6 @@
 # Crontab example
 
-# Backup Things
+## Backup Things
 
 ```crontab
 0 12 * * * /bin/bash $HOME/.dotfiles/scripts/delete-old-branches.sh
