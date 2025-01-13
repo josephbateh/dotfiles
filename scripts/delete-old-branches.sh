@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Crontab entry to run this script every day at 12 PM
-# 0 12 * * * $HOME/.dotfiles/scripts/delete-old-branches.sh
+# 0 12 * * * /bin/bash $HOME/.dotfiles/scripts/delete-old-branches.sh
 
 # This script deletes stale local branches.
 STALE_DAY_THRESHOLD=30
