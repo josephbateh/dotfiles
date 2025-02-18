@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Crontab entry to run this script every day at 12 PM
-# 0 12 * * * /bin/bash $HOME/.dotfiles/scripts/delete-old-branches.sh
+# 0 12 * * * /bin/bash $HOME/.dotfiles/scripts/delete-old-branches.sh abolute-path-to-git-repo
 
 # This script deletes stale local branches.
 STALE_DAY_THRESHOLD=30
@@ -21,7 +21,7 @@ else
 fi
 
 # Change to the git repository directory
-pushd "$1" > /dev/null
+pushd "$1" || exit
 
 # Iterate over each local branch
 git for-each-ref --format='%(refname:short) %(committerdate:unix)' refs/heads/ | while read branch date; do
@@ -31,7 +31,7 @@ git for-each-ref --format='%(refname:short) %(committerdate:unix)' refs/heads/ |
   fi
 
   # Check if the branch is older than the threshold
-  if [ $date -eq $threshold_timestamp ]; then
+  if [ $date -lt $threshold_timestamp ]; then
     echo "Deleting branch: $branch"
     git branch -d "$branch"
   fi
