@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 # Crontab entry to run this script every day at 12 PM
 # 0 12 * * * /bin/bash $HOME/.dotfiles/scripts/delete-old-branches.sh abolute-path-to-git-repo
