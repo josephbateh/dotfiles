@@ -7,12 +7,21 @@
 STALE_DAY_THRESHOLD=30
 RESERVED_PREFIX="saved/"
 
+# Get the directory of the git repository through an argument
+if [ -z "$1" ]; then
+  echo "Usage: $0 <path-to-git-repo>"
+  exit 1
+fi
+
 # Calculate the timestamp for the threshold
 if [[ "$OSTYPE" == "darwin"* ]]; then
   threshold_timestamp=$(date -v-"$STALE_DAY_THRESHOLD"d +%s)
 else
   threshold_timestamp=$(date --date="$STALE_DAY_THRESHOLD days ago" +%s)
 fi
+
+# Change to the git repository directory
+pushd "$1" > /dev/null
 
 # Iterate over each local branch
 git for-each-ref --format='%(refname:short) %(committerdate:unix)' refs/heads/ | while read branch date; do
