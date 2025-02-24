@@ -33,3 +33,8 @@ When prompted, save the key in a file named `prefix_username` in the `~/.ssh` di
 Then, add the following to the `~/.ssh/config` file:
 
 ```sh
+Host github.com-username
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/prefix_username
+```
