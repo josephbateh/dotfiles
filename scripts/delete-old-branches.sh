@@ -21,7 +21,7 @@ else
 fi
 
 # Change to the git repository directory
-pushd "$1"
+pushd "$1" > /dev/null
 
 # Iterate over each local branch
 git for-each-ref --format='%(refname:short) %(committerdate:unix)' refs/heads/ | while read branch date; do
