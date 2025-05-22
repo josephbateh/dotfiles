@@ -31,6 +31,7 @@ brew install duti
 brew install ffmpeg
 brew install fzf
 brew install git
+brew install git-spice
 brew install glances
 brew install gnu-sed
 brew install htop
