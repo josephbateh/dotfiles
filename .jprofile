@@ -35,8 +35,9 @@ alias grs='git reset --soft HEAD~1'
 alias grus='git checkout -- .'
 alias gs='git status'
 alias gars='git add -A && git reset --hard'
-alias gsp='git add -A && git stash && git fetch prune origin && git pull && git stash pop'
 alias grs='git -P log -2 -s --format=%h | tail -1 | xargs git reset --soft'
+# Unalias Git Spice to avoid conflict with Git Status.
+alias gsp="/opt/homebrew/bin/gs"
 
 function git-reset {
   git add -A
