@@ -87,7 +87,7 @@ brew install --cask vnc-viewer
 brew install --cask webstorm
 
 # Install Mac App Store Apps
-mas install 1274495053   # Microsoft To Do
+mas install 1452453066   # Hidden Bar
 mas install 408981434    # iMovie
 mas install 409201541    # Pages
 mas install 441258766    # Magnet
