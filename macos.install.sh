@@ -58,6 +58,7 @@ brew install --cask aerial
 brew install --cask alfred
 brew install --cask azure-data-studio
 brew install --cask balenaetcher
+brew install --cask betterdisplay
 brew install --cask crystalfetch
 brew install --cask cyberduck
 brew install --cask datagrip
