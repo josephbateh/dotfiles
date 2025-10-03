@@ -36,7 +36,7 @@ alias grus='git checkout -- .'
 alias gst='git status'
 alias gars='git add -A && git reset --hard'
 alias grs='git -P log -2 -s --format=%h | tail -1 | xargs git reset --soft'
-alias git-reset-branch=git fetch origin && git reset --hard "origin/$(git rev-parse --abbrev-ref HEAD)"
+alias git-reset-branch='git fetch origin && git reset --hard "origin/$(git rev-parse --abbrev-ref HEAD)"'
 
 function git-reset {
   git add -A
