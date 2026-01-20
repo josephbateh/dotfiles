@@ -102,12 +102,12 @@ function git-new-branch {
 
 function git-worktree-delete-all {
   # Delete all git worktrees (except the main worktree)
-  git worktree list --porcelain | grep '^worktree' | awk '{print $2}' | tail -n +2 | xargs -I {} git worktree remove {}
+  git worktree list --porcelain | grep '^worktree' | sed 's/^worktree //' | tail -n +2 | xargs -I {} git worktree remove {}
 }
 
 function git-worktree-delete-all-force {
   # Force delete all git worktrees (except the main worktree), even with uncommitted changes
-  git worktree list --porcelain | grep '^worktree' | awk '{print $2}' | tail -n +2 | xargs -I {} git worktree remove --force {}
+  git worktree list --porcelain | grep '^worktree' | sed 's/^worktree //' | tail -n +2 | xargs -I {} git worktree remove --force {}
 }
 
 ## Ports and Processes
