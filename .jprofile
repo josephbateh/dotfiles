@@ -14,9 +14,6 @@ alias cwd='printf "%q\n" "$(pwd)"'
 alias unix-epoch='$(date +%s)'
 alias semver-sort='sort -t "." -k1,1n -k2,2n -k3,3n'
 
-# If MacOS, unalias cp, because it adds a flag by default.
-[[ "$(uname)" == "Darwin" ]] && unalias cp
-
 ## Git
 alias g='git'
 alias ga='git add -A'
