@@ -30,6 +30,7 @@ brew install dotnet
 brew install duti
 brew install ffmpeg
 brew install fzf
+brew install gh
 brew install git
 brew install git-spice
 brew install glances
@@ -37,12 +38,17 @@ brew install gnu-sed
 brew install htop
 brew install iftop
 brew install influxdb
+brew install jq
+brew install k9s
+brew install kubectl
 brew install linode-cli
 brew install mas
 brew install minikube
 brew install mongodb-community
 brew install mono
+brew install nano
 brew install pandoc
+brew install parallel
 brew install postgresql
 brew install powershell
 brew install pv
@@ -51,6 +57,7 @@ brew install screen
 brew install telegraf
 brew install tmux
 brew install watch
+brew install xq
 brew install yq
 
 # Install Casks
@@ -86,6 +93,7 @@ brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask vnc-viewer
 brew install --cask webstorm
+brew install --cask zed
 
 # Install Mac App Store Apps
 mas install 1452453066   # Hidden Bar
