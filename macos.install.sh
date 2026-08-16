@@ -61,38 +61,22 @@ brew install xq
 brew install yq
 
 # Install Casks
-brew install --cask aerial
-brew install --cask alfred
-brew install --cask azure-data-studio
 brew install --cask balenaetcher
 brew install --cask betterdisplay
-brew install --cask crystalfetch
 brew install --cask cyberduck
-brew install --cask datagrip
 brew install --cask discord
-brew install --cask disk-inventory-x
 brew install --cask docker
 brew install --cask firefox
 brew install --cask google-chrome
-brew install --cask intel-power-gadget
+brew install --cask grandperspective
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask libreoffice
-brew install --cask microsoft-edge
 brew install --cask microsoft-teams
-brew install --cask multipass
 brew install --cask postman
-brew install --cask rider
-brew install --cask scroll-reverser
-brew install --cask sensiblesidebuttons
 brew install --cask signal
 brew install --cask spotify
-brew install --cask tunnelblick
-brew install --cask utm
-brew install --cask virtualbox
 brew install --cask visual-studio-code
-brew install --cask vnc-viewer
-brew install --cask webstorm
 brew install --cask zed
 
 # Install Mac App Store Apps
